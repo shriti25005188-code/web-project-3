@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Tech & Tomorrow — Educational Blog</title>
+<style>
+  :root{
+    --bg:#fbfcfd;
+    --card:#ffffff;
+    --text:#222;
+    --muted:#6b7280;
+    --accent:#256d6f; /* teal-olive accent */
+    --accent-2:#2c7a7a;
+    --radius:10px;
+  }
+  *{box-sizing:border-box}
+  body{font-family:Arial,Helvetica,sans-serif;margin:0;background:var(--bg);color:var(--text);line-height:1.5}
+  .wrap{max-width:1100px;margin:24px auto;padding:16px}
+  header{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;padding:20px;border-radius:12px}
+  header h1{margin:0;font-size:24px}
+  header p{margin:6px 0 0 0;color:rgba(255,255,255,0.9);font-size:14px}
+  nav{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+  nav a{color:white;text-decoration:none;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.06);font-size:13px}
+  .layout{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:18px}
+  main{min-height:400px}
+  .search{display:flex;gap:8px;margin-bottom:14px}
+  .search input{flex:1;padding:10px;border-radius:8px;border:1px solid #e6eef0}
+  .card{background:var(--card);border-radius:var(--radius);padding:14px;box-shadow:0 6px 18px rgba(16,24,40,0.06);margin-bottom:14px}
+  .post-list .post{display:flex;gap:12px;padding-bottom:12px;border-bottom:1px solid #f0f2f3}
+  .post-list .post:last-child{border-bottom:0;padding-bottom:0}
+  .post-image{width:120px;height:80px;background:#e9f0ef;border-radius:8px;flex:0 0 120px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px}
+  .post-meta h3{margin:0 0 6px 0;font-size:16px}
+  .post-meta p{margin:0;color:var(--muted);font-size:13px}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .tag{background:#eef6f6;color:var(--accent);padding:6px 8px;border-radius:999px;font-size:13px;text-decoration:none}
+  aside{min-width:260px}
+  .sidebar-section h4{margin:0 0 8px 0;color:var(--accent)}
+  .categories ul{list-style:none;padding:0;margin:0}
+  .categories li{padding:6px 0;border-bottom:1px dashed #eef2f2;color:var(--muted);font-size:14px}
+  .featured{display:flex;flex-direction:column;gap:10px}
+  .post-content h2{margin-top:0;color:var(--accent)}
+  .post-content .meta{color:var(--muted);font-size:13px;margin-bottom:12px}
+  .comment-list .comment{border-top:1px solid #f1f3f3;padding-top:10px;margin-top:10px}
+  label{display:block;font-size:13px;color:var(--muted);margin-top:8px}
+  input[type="text"],input[type="email"],textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef0}
+  input[type="submit"]{background:var(--accent);color:white;border:0;padding:10px 14px;border-radius:8px;cursor:pointer;margin-top:10px}
+  footer{text-align:center;color:var(--muted);font-size:14px;margin-top:18px;padding:14px}
+  @media(max-width:900px){
+    .layout{grid-template-columns:1fr;gap:12px}
+    .post-image{display:none}
+    aside{order:2}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Tech & Tomorrow</h1>
+      <p>Clear explanations, practical guides, and trustworthy resources about technology.</p>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#guides">Guides</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#tutorials">Tutorials</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <div class="layout">
+      <main>
+        <div class="card search">
+          <input type="text" placeholder="Search articles, tags, or authors">
+          <input type="submit" value="Search" style="background:var(--accent);color:white;border:0;padding:10px 12px;border-radius:8px;cursor:pointer">
+        </div>
+
+        <section class="card post-list" aria-labelledby="latest">
+          <h3 id="latest" style="margin-top:0">Latest Articles</h3>
+
+          <article class="post">
+            <div class="post-image">Image</div>
+            <div class="post-meta">
+              <h3><a href="#post1" style="color:var(--text);text-decoration:none">Understanding Machine Learning — A Beginner's Guide</a></h3>
+              <p class="muted">Categories: Guides · Tags: ML, AI · Nov 10, 2025</p>
+              <p style="margin-top:8px;color:var(--muted)">A gentle introduction to core ML concepts, algorithms, and how to start building simple models.</p>
+            </div>
+          </article>
+
+          <article class="post">
+            <div class="post-image">Image</div>
+            <div class="post-meta">
+              <h3><a href="#post2" style="color:var(--text);text-decoration:none">Secure Coding Practices for Web Developers</a></h3>
+              <p class="muted">Categories: Tutorials · Tags: Security, Web · Oct 28, 2025</p>
+              <p style="margin-top:8px;color:var(--muted)">Practical tips and patterns to avoid common security pitfalls in web apps.</p>
+            </div>
+          </article>
+
+          <article class="post">
+            <div class="post-image">Image</div>
+            <div class="post-meta">
+              <h3><a href="#post3" style="color:var(--text);text-decoration:none">Best Laptops for Students (2025)</a></h3>
+              <p class="muted">Categories: Reviews · Tags: Laptops, Buying Guide · Sep 12, 2025</p>
+              <p style="margin-top:8px;color:var(--muted)">A concise comparison of budget and mid-range laptops suitable for students.</p>
+            </div>
+          </article>
+
+        </section>
+
+        <section id="post1" class="card post-content">
+          <h2>Understanding Machine Learning — A Beginner's Guide</h2>
+          <div class="meta">By <strong>R. Kaur</strong> · Nov 10, 2025 · Categories: Guides · Tags: <span class="tag">ML</span> <span class="tag">AI</span></div>
+          <p>Machine Learning (ML) is a field of computer science that enables systems to learn and make predictions from data. Core ideas include supervised learning, unsupervised learning, and model evaluation.</p>
+          <p>Start by learning Python and basic statistics. Then move to libraries like scikit-learn and practice with small datasets.</p>
+
+          <div style="margin-top:14px">
+            <strong>Tags</strong>
+            <div class="tags" aria-hidden="false">
+              <a class="tag" href="#ml">ML</a>
+              <a class="tag" href="#ai">AI</a>
+              <a class="tag" href="#python">Python</a>
+              <a class="tag" href="#basics">Basics</a>
+            </div>
+          </div>
+
+          <div style="margin-top:18px" class="card">
+            <h4 style="margin:0 0 8px 0">Comments</h4>
+
+            <div class="comment-list">
+              <div class="comment">
+                <div style="font-weight:600">Amit Sharma <span style="color:var(--muted);font-weight:400">· Nov 11, 2025</span></div>
+                <div style="color:var(--muted);margin-top:6px">Great intro — helped me structure my learning path. Thank you!</div>
+              </div>
+              <div class="comment">
+                <div style="font-weight:600">Sneha Patel <span style="color:var(--muted);font-weight:400">· Nov 11, 2025</span></div>
+                <div style="color:var(--muted);margin-top:6px">Can you recommend beginner datasets to practice?</div>
+              </div>
+            </div>
+
+            <form style="margin-top:12px" action="#" method="post">
+              <label for="cname">Name</label>
+              <input id="cname" name="name" type="text" required>
+
+              <label for="cemail">Email (won't be published)</label>
+              <input id="cemail" name="email" type="email" required>
+
+              <label for="ccomment">Comment</label>
+              <textarea id="ccomment" name="comment" rows="4" required></textarea>
+
+              <input type="submit" value="Post Comment">
+            </form>
+          </div>
+        </section>
+
+      </main>
+
+      <aside>
+        <div class="card sidebar-section">
+          <h4>Categories</h4>
+          <div class="categories">
+            <ul>
+              <li>Guides (12)</li>
+              <li>Tutorials (8)</li>
+              <li>Reviews (6)</li>
+              <li>News (4)</li>
+              <li>Interviews (2)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card sidebar-section">
+          <h4>Popular Tags</h4>
+          <div class="tags">
+            <a class="tag" href="#ai">AI</a>
+            <a class="tag" href="#ml">ML</a>
+            <a class="tag" href="#web">Web</a>
+            <a class="tag" href="#python">Python</a>
+            <a class="tag" href="#security">Security</a>
+            <a class="tag" href="#cloud">Cloud</a>
+          </div>
+        </div>
+
+        <div class="card sidebar-section featured">
+          <h4>Featured Post</h4>
+          <div style="font-weight:600">Secure Coding Practices for Web Developers</div>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">Practical patterns to build safer web apps — Oct 28, 2025</div>
+        </div>
+
+        <div class="card sidebar-section">
+          <h4>Subscribe</h4>
+          <p style="margin:6px 0;color:var(--muted)">Get weekly guides and resources in your inbox.</p>
+          <form action="#" method="post">
+            <input type="text" placeholder="Your email" required>
+            <input type="submit" value="Subscribe" style="background:var(--accent);color:white;border:0;padding:10px;border-radius:8px;margin-top:8px;cursor:pointer">
+          </form>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      &copy; 2025 Tech & Tomorrow — Educational blog about technology
+    </footer>
+  </div>
+</body>
+</html>
